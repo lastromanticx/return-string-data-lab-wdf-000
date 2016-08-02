@@ -16,7 +16,7 @@
       });
 
       $.get("/products/" + id + "/inventory", function(data){
-        $("#inv-" + id).text(Boolean(data) && "Available" || "Sold Out");
+        $("#inv-" + id).text(JSON.parse(data) && "Available" || "Sold Out");
       });
 
     });    
